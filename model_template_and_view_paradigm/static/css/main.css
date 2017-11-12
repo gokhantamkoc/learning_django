@@ -1,0 +1,9 @@
+body {
+    background-color: purple;
+    color: white;
+}
+
+table, th, td {
+    border: 2px solid;
+    border-color: white;
+}

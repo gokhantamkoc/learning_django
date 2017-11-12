@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Django Web App</title>
+        <link href="{% static "css/main.css"%}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="djangotwo">
+            {% if access_records %}
+            <table>
+                <thead>
+                    <th>Site Name</th>
+                    <th>Date Accessed</th>
+                </thead>
+                <tbody>
+                    {% for acc_rec in access_records %}
+                    <tr>
+                        <td>{{acc_rec.webpage}}</td>
+                        <td>{{acc_rec.date}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% else  %}
+            <p>No access records!</p>
+            {% endif %}
+        </div>
+        <img src="{% static "images/einstein.jpg" %}" alt="Image Not Available"/>
+    </body>
+</html>
