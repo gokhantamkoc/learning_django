@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Django Web App</title>
+        <link href="{% static "css/main.css"%}" rel="stylesheet">
+    </head>
+    <body>
+        <p>{{message}}</p>
+        <img src="{% static "images/einstein.jpg" %}" alt="Image Not Available"/>
+    </body>
+</html>
