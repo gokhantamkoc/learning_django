@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Django Web App - Access Record Form</title>
+        <link href="{% static "css/main.css"%}" rel="stylesheet">
+    </head>
+    <body>
+        {% block content %}
+            <form method="post">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button type="submit">Save</button>
+            </form>
+        {% endblock %}
+    </body>
+</html>
